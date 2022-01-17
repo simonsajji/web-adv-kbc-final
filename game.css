@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Baloo+Bhaijaan+2&family=Comfortaa&family=Concert+One&family=Dosis:wght@300&family=Genos:wght@300&family=Lato&family=Montserrat:wght@300&family=Pacifico&family=Permanent+Marker&family=Special+Elite&family=Voltaire&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+    margin:0;
+    border:0;
+    padding:0;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    background: url('./endless-constellation.svg');
+    background-color:rgba(255, 254, 254, 0.9);;
+}
+::selection{
+    color: #fff;
+    background: #007bff;
+}
+
+.info_box,.quiz_box,
+.result_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+
+
+.info_box{
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.info_box .info-title{
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.1rem;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info_box .info-list{
+    padding: 0.5rem 1rem;
+}
+
+.info_box .info-list .info{
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.info_box .info-list .info span{
+    font-weight: 600;
+    color: #7700ff;
+}
+.info_box .buttons{
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+
+.start_btn button{
+    font-size: 2rem;
+    background-color: #007bff;
+    color:white;
+    height:5rem;
+    
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width:15rem;
+}
+
+.container  .timer{
+    color: #004085;
+    background:transparent;
+    height: 5rem;
+    padding: 0 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 24%;
+    
+}
+
+.container  .timer .time_left_txt{
+    font-weight: 400;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.container  .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.container  .time_line{
+    margin:1rem 0;
+    position:absolute;
+    top:11%;
+    left:5%;
+
+    height: 3px;
+    background: #007bff;
+}
+.container{
+    width: 40vw;
+    height:60vh;
+    background-color:rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+
+
+
+}
+
+#question{
+    width:95%;
+    height:20%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color:white;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-weight: bolder;
+}
+
+progress::-webkit-progress-value {
+    transition: 1s width;
+}
+
+progress{
+    width:95%;
+    height:0.2rem;
+    background:green;
+    margin-bottom: 1rem;
+}
+
+.options{
+    width:95%;
+    height:50%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:4rem;
+    
+   
+
+}
+
+#result{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:2rem;
+    color:white;
+
+}
+.none{
+    display:none;
+}
+
+#op1{
+
+    width:calc(50% - 4rem);
+    background-color:white;
+    height: 4rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    background: rgba(50, 38, 73, 0.7);
+    color:rgb(255, 255, 255,0.8);
+    cursor:pointer;
+    
+  
+}
+#op2{
+
+    width:calc(50% - 4rem);
+    background-color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    height: 4rem;
+    background: rgba(50, 38, 73, 0.7);
+    color:rgb(255, 255, 255,0.8);
+    cursor:pointer;
+  
+}
+#op3{
+
+    width:calc(50% - 4rem);
+    background-color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    height: 4rem;
+    background: rgba(50, 38, 73, 0.7);
+    color:rgb(255, 255, 255,0.8);
+    cursor:pointer;
+  
+}
+#op4{
+    width:calc(50% - 4rem);
+    background-color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.3rem;
+    height: 4rem;
+    background: rgba(50, 38, 73, 0.7);
+    color:rgb(255, 255, 255,0.8);
+    cursor:pointer;
+  
+}
+
+
+#foot{
+    height:10%;
+    width:95%;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: right;
+    margin-top:2rem;
+    gap:1rem;
+    
+
+    
+}
+
+
+#next_btn{
+    margin-right: 1rem;
+    width:4rem;
+    height:2rem;
+    background-color:rgba(53, 85, 126, 0.9);
+    color:white;
+    border-radius:0.5rem;
+    border:0;
+
+}
+button{
+    margin-right: 1rem;
+    width:4rem;
+    height:2rem;
+    background-color:rgba(53, 85, 126, 0.9);
+    color:white;
+    border-radius:0.5rem;
+    border:0;
+}
+
+
+.opts .disabled{
+    pointer-events: none;
+    opacity:0.5;
+}
+
+
+.correct::after{
+    content:'✔';
+    color:green;
+    font-size:1.5rem;
+    margin-right:1rem;
+
+}
+
+.incorrect::after{
+    content:'❌';
+    color:red;
+    font-size:1.5rem;
+    margin-right:1rem;
+
+}
+
+
+.showResults{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    font-size:3rem;
+    font-family: 'Comfortaa', cursive;
+    color:turquoise;
+}

@@ -1,0 +1,33 @@
+{
+
+    "question_list":{ 
+        "q1":{
+        "question":"Which toys have been marketed with the phrase “robots in disguise?",
+        "correct_answer":"Transformers",
+        "options":["Bratz Dolls","Sylvanian Families","Transformers","Hatchimals"] },
+     "q2":{
+        "question":"What is the Celsius equivalent of 77 degrees Fahrenheit?",
+        "correct_answer":25,
+        "options":[15,20,25,30]},
+     "q3":{
+        "question":"Which of the following number is divisible by 9?",
+        "correct_answer":65889,
+        "options":[56785,45678,65889,67578]
+    },
+     "q4":{
+        "question":"Obstetrics is a branch of medicine particularly concerned with what?",
+        "correct_answer":"Childbirth",
+        "options":["Childbirth","Broken bones","Old age","Heart conditions"]
+    },
+     "q5":{
+        "question":"Which of these brands was chiefly associated with the manufacture of household locks?",
+        "correct_answer":"Chubb",
+        "options":["Phillips","Flymo","Chubb","Ronseal"]
+    }
+     
+}
+   
+   
+    
+
+}

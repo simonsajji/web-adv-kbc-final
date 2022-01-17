@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <!-- Start Quiz box -->
+
+    <div class="start_btn"><button>Start Quiz</button></div>
+
+    <!-- INfo box -->
+
+    <div class="info_box none">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. The timer is <span>15 seconds</span> per each question.</div>
+            <div class="info">2. Once answer is selected it can't be undone.</div>
+            <div class="info">3. You can't select any option once time goes off.</div>
+            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
+            
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart" id="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- COntainer of the quizes -->
+    <div class="container quiz_box none">
+        
+        <div class="timer">
+            <div class="time_left_txt">Time Left</div>
+            <div class="timer_sec">15</div>
+        </div>
+        <div class="time_line"></div>
+        <div id="question"></div>
+        <div class="options" id="op_container">
+            <div class="opts" id="op1" onClick="optionSelected(this)"></div>
+            <div class="opts"id="op2" onClick="optionSelected(this)"></div>
+            <div class="opts"id="op3" onClick="optionSelected(this)"></div>
+            <div class="opts"id="op4" onClick="optionSelected(this)"></div>
+
+        
+        </div>
+
+
+        <div id="foot"> 
+            <button id="next_btn" class="next_btn none">Next</button>
+        </div>
+
+    </div>
+
+    <div class="showResults none" id="res">
+       
+
+    </div>
+
+
+       
+    
+    
+
+
+        
+
+    <script src="game.js"></script>
+</body>
+</html>
